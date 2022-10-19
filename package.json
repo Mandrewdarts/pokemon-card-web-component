@@ -1,0 +1,27 @@
+{
+  "name": "pokemon-card",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/pokemon-card.js",
+  "exports": {
+    ".": "./dist/pokemon-card.js"
+  },
+  "types": "types/pokemon-card.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:prod": "NODE_ENV=production npm run build"
+  },
+  "dependencies": {
+    "lit": "^2.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.6.4",
+    "vite": "^3.1.0"
+  }
+}
