@@ -3,15 +3,32 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + Lit + TS</title>
   <link rel="stylesheet" href="./src/index.css" />
   <script type="module" src="./src/pokemon-card.ts"></script>
+  <style>
+    pokemon-card {
+      margin: 1rem;
+    }
+
+    body {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  </style>
 </head>
 
 <body>
-  <pokemon-card></pokemon-card>
+  <pokemon-card character="bulbasaur"></pokemon-card>
+  <pokemon-card character="raichu"></pokemon-card>
+  <pokemon-card character="raichu"></pokemon-card>
+
+  <script>
+    const el = document.createElement('pokemon-card')
+    el.setAttribute('character', 'raichu')
+    document.body.appendChild(el)
+  </script>
 </body>
 
 </html>
