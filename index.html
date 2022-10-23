@@ -5,28 +5,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + Lit + TS</title>
-  <script type="module" src="./src/pokemon-card.ts"></script>
+  <script type="module" defer src="./src/pokemon-card.ts"></script>
   <style>
-    pokemon-card {
-      margin: 1rem;
-    }
-
-    body {
+    #pokemon-list {
+      justify-content: center;
       display: flex;
       flex-wrap: wrap;
+      gap: 1rem;
     }
   </style>
 </head>
 
 <body>
-  <pokemon-card character="bulbasaur"></pokemon-card>
-  <pokemon-card character="raichu"></pokemon-card>
-  <pokemon-card character="raichu"></pokemon-card>
+  <div id="pokemon-list"></div>
 
   <script>
-    const el = document.createElement('pokemon-card')
-    el.setAttribute('character', 'raichu')
-    document.body.appendChild(el)
+    const pokemonList = document.querySelector('#pokemon-list')
+    fetch('https://pokeapi.co/api/v2/pokemon').then(res => res.json())
+      .then((res) => {
+        for (const pokemon of res.results) {
+          const el = document.createElement('pokemon-card')
+          el.setAttribute('character', pokemon.name)
+          pokemonList.appendChild(el)
+        }
+      })
   </script>
 </body>
 

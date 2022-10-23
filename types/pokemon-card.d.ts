@@ -1,10 +1,13 @@
-import { LitElement } from 'lit';
-export declare class PokemonCardHTMLElement extends LitElement {
-    render(): import("lit-html").TemplateResult<1>;
-    static styles: import("lit").CSSResult;
-}
-declare global {
-    interface HTMLElementTagNameMap {
-        'pokemon-card': PokemonCardHTMLElement;
-    }
+export declare class PokemonCardHTMLElement extends HTMLElement {
+    static observedAttributes: string[];
+    static cache: {
+        [key: string]: any;
+    };
+    data: any;
+    loading: boolean;
+    getCharacter(): string;
+    connectedCallback(): void;
+    fetchAndRender(): void;
+    attributeChangedCallback(): void;
+    render(): void;
 }

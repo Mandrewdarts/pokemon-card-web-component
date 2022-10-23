@@ -1,7 +1,6 @@
 {
-  "name": "pokemon-card",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@mandrewdarts/pokemon-card",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/pokemon-card.js",
   "exports": {
@@ -23,5 +22,26 @@
   "devDependencies": {
     "typescript": "^4.6.4",
     "vite": "^3.1.0"
+  },
+  "description": "A web component to render pokemon information. Link to design https://www.figma.com/proto/1I2mhCanlwxvpbcmA9Q6uZ/Pokemon-Card-Component?page-id=0%3A1&node-id=1%3A3&viewport=251%2C419%2C1.24&scaling=min-zoom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mandrewdarts/pokemon-card-web-component.git"
+  },
+  "keywords": [
+    "web",
+    "component",
+    "pokemon",
+    "custom",
+    "element"
+  ],
+  "author": "mandrewdarts@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mandrewdarts/pokemon-card-web-component/issues"
+  },
+  "homepage": "https://github.com/Mandrewdarts/pokemon-card-web-component#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }
