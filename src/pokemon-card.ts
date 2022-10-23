@@ -87,7 +87,7 @@ function statListItem({ name, stat }: any) {
   return html`
     <li class="stat-item">
       <span class="stat-name">${name}</span>
-      <progress max="100" value="${stat}"></progress>
+      <progress max="255" value="${stat}"></progress>
       <span class="stat-value">${stat}</span>
     </li>
   `;
