@@ -1,6 +1,6 @@
 {
   "name": "@mandrewdarts/pokemon-card",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "type": "module",
   "main": "dist/pokemon-card.js",
   "exports": {
@@ -14,14 +14,16 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "build:prod": "NODE_ENV=production npm run build"
+    "build:prod": "NODE_ENV=production npm run build",
+    "docs": "npx wca src/pokemon-card.ts --format markdown --outFile Docs.md"
   },
   "dependencies": {
     "lit": "^2.3.1"
   },
   "devDependencies": {
     "typescript": "^4.6.4",
-    "vite": "^3.1.0"
+    "vite": "^3.1.0",
+    "web-component-analyzer": "^1.1.7"
   },
   "description": "A web component to render pokemon information. Link to design https://www.figma.com/proto/1I2mhCanlwxvpbcmA9Q6uZ/Pokemon-Card-Component?page-id=0%3A1&node-id=1%3A3&viewport=251%2C419%2C1.24&scaling=min-zoom",
   "repository": {
